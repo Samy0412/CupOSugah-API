@@ -1,4 +1,4 @@
-# Interview Scheduler API
+# Cuposugah API
 
 ## Setup
 
