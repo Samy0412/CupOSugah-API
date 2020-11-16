@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { groupBy } = require("../helpers/groupby");
+const { groupBy } = require("../helpers/groupBy");
 const { createConversationID } = require("../helpers/createConversationID");
 const { findUserByID } = require("../helpers/findUserByID");
 
