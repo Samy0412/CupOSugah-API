@@ -1,8 +1,8 @@
 Begin;
 
 CREATE EXTENSION IF NOT EXISTS pgcrypto;
--- this allows us to encrypt passwords in psql using 
--- crypt('password', gen_salt('bf'))
+-- -- this allows us to encrypt passwords in psql using 
+-- -- crypt('password', gen_salt('bf'))
 
 DROP TABLE IF EXISTS messages CASCADE;
 DROP TABLE IF EXISTS conversations CASCADE;
@@ -13,6 +13,8 @@ DROP TABLE IF EXISTS services CASCADE;
 DROP TABLE IF EXISTS events CASCADE;
 DROP TABLE IF EXISTS users CASCADE;
 DROP TABLE IF EXISTS neighbourhoods CASCADE;
+
+
 
 CREATE TABLE neighbourhoods (
  id SERIAL PRIMARY KEY NOT NULL,
