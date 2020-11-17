@@ -79,7 +79,7 @@ module.exports = function application(
     Promise.all([
       read(path.resolve(__dirname, `db/schema/create.sql`)),
       read(path.resolve(__dirname, `db/schema/development.sql`)),
-      read(path.resolve(__dirname, `db/schema/${ENV}.sql`)),
+      // read(path.resolve(__dirname, `db/schema/${ENV}.sql`)),
     ])
       .then(([create, seed]) => {
         return db.query(create).then(() => db.query(seed));

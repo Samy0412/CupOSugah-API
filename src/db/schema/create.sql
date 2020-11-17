@@ -55,7 +55,7 @@ CREATE TABLE events (
  coordinates POINT,
  time_created TIMESTAMPTZ NOT NULL DEFAULT now(),
  description TEXT NOT NULL,
- event_start TIMESTAMPZ,
+ event_start TIMESTAMPTZ,
  event_photo TEXT DEFAULT 'https://i.imgur.com/j6IJGS2.png'
 );
 
