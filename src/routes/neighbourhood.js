@@ -15,28 +15,6 @@ module.exports = db => {
     });
   });
 
-  router.get("/choices", (request, response) => {
-    // findUserByID(request.session.user_id)
-    //   .then((user) => {
-        findUserCoordinates(request.session.user_id)
-          .then((coordinates) => {
-            db.query(
-              `
-              SELECT * 
-              FROM neighbourhoods;
-              `
-            ).then(({ rows: data }) => {
-              for (items of data) {
-                items.score = Math.sqrt(Math.pow((coordinates.x - items.coordinates.x), 2) + Math.pow((coordinates.y - items.coordinates.y), 2));
-              }
-              response.json(data.sort((a, b) => {
-                if (a.score < b.score) return -1;
-                if (a.score > b.score) return 1;
-                return 0;
-              }));
-            });
-          });
-  });
 
   router.post("/create", (request,response)=> {
     const values = [

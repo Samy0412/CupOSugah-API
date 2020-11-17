@@ -35,7 +35,7 @@ module.exports = db => {
         FROM conversations
         JOIN messages ON conversations.id = messages.conversation_id
         WHERE (messages.sender_id = $1 OR messages.receiver_id = $1);
-        `, [request.session["user_id"]])
+        `, [request.query.user_id])
       .then(({ rows: messages }) => {
         const result = groupBy(messages, 'id');
         return response.json(result);
