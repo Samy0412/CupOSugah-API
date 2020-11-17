@@ -28,7 +28,7 @@ const createConversationID = function (senderID, receiverID) {
       ).then((results) => {
         return results.rows[0].id;
       }
-      );
+      ).catch((err)=> console.log(err))
     }
   });
 };

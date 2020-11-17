@@ -46,7 +46,7 @@ module.exports = db => {
     // console.log('Request Body', request.body);
     values = [
       request.body.conversation_id,
-      request.session.user_id,
+      request.body.user_id,
       request.body.receiver_id,
       request.body.message
     ];
@@ -72,11 +72,11 @@ module.exports = db => {
   });
 
   router.post("/newMessage", (request, response) => {
-    createConversationID(request.session.user_id, request.body.receiver_id)
+    createConversationID(request.body.user_id, request.body.receiver_id)
       .then((conversationID) => {
         values = [
           conversationID,
-          request.session.user_id,
+          request.body.user_id,
           request.body.receiver_id,
           request.body.message,
         ];
@@ -92,9 +92,8 @@ module.exports = db => {
   });
 
   router.get("/conversation", (request, response) => {
-    // console.log("Request Query:", request.query);
-    // console.log("Request Session ID", request.session.user_id);
-    // console.log("Request Body", request.body);
+    const user_id = request.query.user_id;
+    const receiver_id = request.query.receiver_id;
     db.query(
       `
         SELECT conversations.*, messages.sender_id, messages.receiver_id, messages.message_text, messages.time_sent
@@ -102,18 +101,19 @@ module.exports = db => {
         JOIN messages ON conversations.id = messages.conversation_id
         WHERE (conversations.user_one = $1 AND conversations.user_two = $2)
         OR (conversations.user_one = $2 AND conversations.user_two = $1);
-        `, [request.session.user_id, request.query.receiver_id])
+        `, [user_id,receiver_id])
       .then(({ rows: messages }) => {
         if (messages.length >= 1) {
           const result = groupBy(messages, 'id');
           return response.json(result);
         } else {
-          createConversationID(request.session.user_id, request.query.receiver_id)
+         
+          createConversationID(user_id,receiver_id)
             .then((conversationID) => {
               values = [
                 conversationID,
-                request.session.user_id,
-                request.query.receiver_id,
+                user_id,
+                receiver_id,
                 `New conversation started`
               ];
               db.query(
@@ -136,7 +136,7 @@ module.exports = db => {
         FROM conversations
         JOIN messages ON conversations.id = messages.conversation_id
         WHERE (messages.sender_id = $1 OR messages.receiver_id = $1);
-        `, [request.session["user_id"]])
+        `, [request.body.user_id])
                 .then(({ rows: messages }) => {
                   const result = groupBy(messages, 'id');
                   return response.json(result);
