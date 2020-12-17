@@ -145,19 +145,19 @@ VALUES
 
 --Neighbourhood 3 Events
 
-(3, 19, 3, 'Tournoi de tennis', '(45.533355, -73.627170)', '2020-08-01 14:40:34-07', 'Nous sommes de joueuses qui recherchons deux autres joueurs pour organiser des parties de doubles. Nous avons un niveau intermédiaire, pas besoin d être professionnel!', NOW() + '9 days -02:00', '/images/events/sports-tennis.jpg'),
+(3, 19, 3, 'Tournoi de tennis', '(45.533355, -73.627170)', '2020-08-01 14:40:34-07', 'Nous sommes de joueuses qui recherchons deux autres joueurs pour organiser des parties de doubles. Nous avons un niveau intermédiaire, pas besoin d être professionnel!', NOW() + '9 days -04:00', '/images/events/sports-tennis.jpg'),
 
-(21, 12, 3, 'Vente de garage', '(45.54239, -73.62577)', '2020-08-07 16:40:34-07', 'Je déménage dans 2 semaines et je dois me débarrasser de beaucoup de choses, il y aurait des vêtements et des meubles, venez voir!', NOW() + '3 days -06:00', '/images/events/Garage-Sale-2.jpg'),
+(21, 12, 3, 'Vente de garage', '(45.54239, -73.62577)', '2020-08-07 16:40:34-07', 'Je déménage dans 2 semaines et je dois me débarrasser de beaucoup de choses, il y aurait des vêtements et des meubles, venez voir!', NOW() + '3 days -08:00', '/images/events/Garage-Sale-2.jpg'),
 
 (24, 13, 3, 'Fundraising', '(45.53588, -73.64042)', '2020-08-05 16:40:34-07', 'We are organising a fundraising to get supplies to support those on COVID-19 s front lines', NOW() + '10 days -05:00', '/images/events/fundraising-1.jpg'),
 
-(27, 15, 3, 'Macrame workshop!', '( 45.54118, -73.636679)', '2020-08-02 14:40:34-07', 'Come and join me for a macrame workshop. I just ask for a 5$ participation for the material and you will come back home with a nice plant holder! I will have snacks for everyone.', NOW() + '2 days 00:00', '/images/events/crafts-macrame.jpg'),
+(27, 15, 3, 'Macrame workshop!', '( 45.54118, -73.636679)', '2020-08-02 14:40:34-07', 'Come and join me for a macrame workshop. I just ask for a 5$ participation for the material and you will come back home with a nice plant holder! I will have snacks for everyone.', NOW() + '2 days -05:00', '/images/events/crafts-macrame.jpg'),
 
 (31, 20, 3, 'Chess for seniors', '(45.538183, -73.619058)', '2020-08-03 16:40:34-07', 'We are organising chess games for seniors once a month at the Sainte Cecile church, but anyone can join, we don t discriminate on age. ;)', NOW() + '7 days -07:00', '/images/events/games-chest-senior.jpg'),
 
-(22, 16, 3, 'Kids party with pinata', '(45.53856, -73.62259)', '2020-08-01 16:40:34-07', 'It is Mathias 10th birthday, and for the occasion we are buying his first pinata. Kids and their parents are invited to have fun with us! Lots of candies!', NOW() + '16 days -00:00', '/images/events/kids-pinata.jpg'),
+(22, 16, 3, 'Kids party with pinata', '(45.53856, -73.62259)', '2020-08-01 16:40:34-07', 'It is Mathias 10th birthday, and for the occasion we are buying his first pinata. Kids and their parents are invited to have fun with us! Lots of candies!', NOW() + '16 days -05:00', '/images/events/kids-pinata.jpg'),
 
-(25, 18, 3, 'Film screening: back to the future!!!', '(45.54301, -73.63066)', '2020-08-04 15:40:34-07', 'Come join us to watch Back to the future. We have installed a giant screen in our backyard. Places limited to 15, write me a message to book your spot!', NOW() + '20 days +01:00', '/images/events/party-film-screening.jpg');
+(25, 18, 3, 'Film screening: back to the future!!!', '(45.54301, -73.63066)', '2020-08-04 15:40:34-07', 'Come join us to watch Back to the future. We have installed a giant screen in our backyard. Places limited to 15, write me a message to book your spot!', NOW() + '20 days -02:00', '/images/events/party-film-screening.jpg');
 
 --Neighbourhood 4 Events
 
