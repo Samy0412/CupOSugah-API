@@ -1,4 +1,4 @@
-# Cuposugah API
+# Cuposugah API(server-side)
 
 ## Setup
 
@@ -6,23 +6,27 @@ Install dependencies with `npm install`.
 
 ## Creating The DB
 
-Use the `psql -U development` command to login to the PostgreSQL server with the username `development` and the password `development`. This command **MUST** be run in a vagrant terminal, we are using the PostgreSQL installation provided in the vagrant environment.
+You need to use a machine with PostgreSQL installed on it.
 
-Create a database with the command `CREATE DATABASE neighbourhood_development;`.
+Create a database with the command `CREATE DATABASE neighbourhood;`.
 
-Copy the `.env.example` file to `.env.development` and fill in the necessary PostgreSQL configuration. The `node-postgres` library uses these environment variables by default.
-
+Copy the `.env.example` file to `.env.development` and fill in the necessary PostgreSQL configuration (all the [ ] need to be filled using your configuration data)
+You also need to have a Cloudinary account and keys to be able to upload pictures.
 ```
 PGHOST=localhost
-PGUSER=development
-PGDATABASE=neighbourhood_development
-PGPASSWORD=development
-PGPORT=5432
+PGUSER=[]
+PGDATABASE=neighbourhood
+PGPASSWORD=[]
+PGPORT=5432 (or the PORT you are using for postgresql)
+
+CLOUDINARY_CLOUD_NAME=[]
+CLOUDINARY_API_KEY=[]
+CLOUDINARY_API_SECRET=[]
 ```
 
 ## Seeding
 
-Run a the development server with `npm start` in the Host environment. We are only using vagrant for `psql` this week.
+Run a the development server with `npm start`.
 
 Both of these achieve the same result.
 
@@ -34,13 +38,38 @@ The `development` data is random. Each time we seed we expect to see different a
 ## Run The Server
 
 Running the server normally
-
 ```sh
 npm start
 ```
 
-Running the server so it returns an error when saving/deleting for testing the client's error handling capabilities
+## Exemple of API call
 
-```sh
-npm run error
+### Events
+
+`GET /api/events`
+
+Response
+
+```json
+[
+  {
+    id: 4,
+    user_id: 27,
+    category_id: 15,
+    neighbourhood_id: 3,
+    title: "Macrame workshop!",
+    - coordinates: {
+    x: 45.54118,
+    y: -73.636679
+    },
+    time_created: "2020-08-02T21:40:34.000Z",
+    description: "Come and join me for a macrame workshop. I just ask for a 5$ participation for the material and you will come back home with a nice plant holder! I will have       snacks for everyone.",
+    event_start: "2020-12-20T18:53:10.502Z",
+    event_photo: "/images/events/crafts-macrame.jpg",
+    first_name: "Sara",
+    last_name: "Costa",
+    profile_photo: "/images/users/w9.png"
+  },
+  ...
+]
 ```
