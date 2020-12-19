@@ -1,4 +1,4 @@
-# Cuposugah API(server-side)
+# Cuposugah API (server-side)
 
 ## Setup
 
