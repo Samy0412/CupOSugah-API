@@ -26,7 +26,7 @@ CLOUDINARY_API_SECRET=[]
 
 ## Seeding
 
-Run a the development server with `npm start`.
+Run the development server with `npm start`.
 
 Both of these achieve the same result.
 
