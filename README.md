@@ -56,12 +56,12 @@ Response
     category_id: 15,
     neighbourhood_id: 3,
     title: "Macrame workshop!",
-    - coordinates: {
+    coordinates: {
     x: 45.54118,
     y: -73.636679
     },
     time_created: "2020-08-02T21:40:34.000Z",
-    description: "Come and join me for a macrame workshop. I just ask for a 5$ participation for the material and you will come back home with a nice plant holder! I will have       snacks for everyone.",
+    description: "Come and join me for a macrame workshop. I just ask for a 5$ participation for the material and you will come back home with a nice plant holder! I will have snacks for everyone.",
     event_start: "2020-12-20T18:53:10.502Z",
     event_photo: "/images/events/crafts-macrame.jpg",
     first_name: "Sara",
