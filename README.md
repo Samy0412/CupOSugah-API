@@ -28,6 +28,8 @@ CLOUDINARY_API_SECRET=[]
 
 Run the development server with `npm start`.
 
+Go to http://localhost:8001/ in your browser.
+
 Both of these achieve the same result.
 
 - Make a `GET` request to `/api/debug/reset` with `curl http://localhost:8001/api/debug/reset`.
