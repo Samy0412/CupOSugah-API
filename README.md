@@ -10,7 +10,7 @@ You need to use a machine with PostgreSQL installed on it.
 
 Create a database with the command `CREATE DATABASE neighbourhood;`.
 
-Copy the `.env.example` file to `.env.development` and fill in the necessary PostgreSQL configuration (all the [ ] need to be filled using your configuration data)
+Copy the `.env.example` file to `.env.development` and fill in the necessary PostgreSQL configuration (all the [ ] need to be filled using your configuration data).
 You also need to have a Cloudinary account and keys to be able to upload pictures.
 ```
 PGHOST=localhost
