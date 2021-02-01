@@ -1,4 +1,4 @@
-# Cuposugah API(server-side)
+# Cuposugah API (server-side)
 
 ## Setup
 
@@ -27,6 +27,8 @@ CLOUDINARY_API_SECRET=[]
 ## Seeding
 
 Run the development server with `npm start`.
+
+Go to http://localhost:8001/ in your browser.
 
 Both of these achieve the same result.
 
