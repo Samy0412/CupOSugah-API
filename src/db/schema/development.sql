@@ -33,7 +33,7 @@ VALUES
 
 --Neighbourhood 3 Users
 
-(3, 'p.lacroix@gmail.com', crypt('password', gen_salt('bf')), '(45.54239, -73.62577)', 'Pauline', 'Lacroix', '15146233583', '/images/users/w5.jpg', 'Bonjour tout le monde! heureuse de faire partie de ce quartier! tellement de belles personnes y vivent!'),
+(3, 'pauline.lacroix@gmail.com', crypt('password', gen_salt('bf')), '(45.54239, -73.62577)', 'Pauline', 'Lacroix', '15146233583', '/images/users/w5.jpg', 'Bonjour tout le monde! heureuse de faire partie de ce quartier! tellement de belles personnes y vivent!'),
 
 (3, 'james.petit@gmail.com', crypt('password', gen_salt('bf')), '(45.53979, -73.62693)', 'James', 'Petit', '15141234567', '/images/users/m6.png', 'New to the neighbourhood, looking to find some cool events'),
 
