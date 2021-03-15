@@ -6,7 +6,7 @@ const helmet = require("helmet");
 const cors = require("cors");
 const app = express();
 const db = require("./db");
-const timeout = require("connect-timeout")
+
 
 let cookieSession = require("cookie-session");
 
@@ -44,15 +44,11 @@ module.exports = function application(
   ENV
   // actions = { updateAppointment: () => { } }
 ) {
-  app.use(timeout('5s'));
+  
   app.use(cors());
-  app.use(haltOnTimedout);
   app.use(helmet());
-  app.use(haltOnTimedout);
   app.use(bodyparser.json());
-  app.use(haltOnTimedout);
   app.use(bodyparser.urlencoded({ extended: true }));
-  app.use(haltOnTimedout);
   app.use(
     cookieSession({
       name: "session",
@@ -62,7 +58,6 @@ module.exports = function application(
       ],
     })
   );
-  app.use(haltOnTimedout);
 
   //Routes
   app.use("/", indexRoutes);
@@ -79,9 +74,6 @@ module.exports = function application(
   app.use("/account", accountRoutes(db));
   app.use("/images", imageRoutes(db));
 
-  function haltOnTimedout (req, res, next) {
-    if (!req.timedout) next()
-  }
 
   //Database reset 
   app.get("/api/debug/reset", (request, response) => {
