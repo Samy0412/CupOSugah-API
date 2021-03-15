@@ -46,7 +46,7 @@ npm start
 
 ### Events
 
-`GET /api/events`
+`GET /events`
 
 Response
 
