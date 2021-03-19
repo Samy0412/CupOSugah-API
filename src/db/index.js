@@ -7,7 +7,6 @@ const client = new pg.Client({
   }
 });
 
-console.log("client:",client)
 
 client
   .connect()
